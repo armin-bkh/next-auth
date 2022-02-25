@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    box-shadow: 0 5px 5px #ececec;
+}
+
+
+.logo{
+    font-size: 25px;
+    color: #6366f1;
+}
+
+
+.navbarNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem:not(:last-child){
+    margin-right: 10px;
+}
+
+.navLink{
+    padding: 10px 5px;
+}
+
+.activeLink{
+    color: #6366f1;
+}
