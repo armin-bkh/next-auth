@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity .2s linear;
 }
 
 .navItem:not(:last-child){
@@ -29,4 +30,12 @@
 
 .activeLink{
     color: #6366f1;
+}
+
+.loading{
+    opacity: 0;
+}
+
+.loaded{
+    opacity: 1;
 }
