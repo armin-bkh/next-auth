@@ -4,9 +4,9 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import styles from "styles/Navbar.module.css";
 
 const links = [
-  { id: 1, title: "Home", href: "/" },
-  { id: 2, title: "Blogs", href: "/blogs" },
-  { id: 3, title: "Dashboard", href: "/dashboard" },
+  { id: 1, title: "home", href: "/" },
+  { id: 2, title: "blogs", href: "/blogs" },
+  { id: 3, title: "dashboard", href: "/dashboard" },
   {
     id: 4,
     title: "sign in",
@@ -42,7 +42,8 @@ const Navbar = () => {
           {links.map((link) =>
             (status === "authenticated" && link.title === "sign in") ||
             (status === "unauthenticated" &&
-              link.title === "sign out") ? null : (
+              (link.title === "sign out" ||
+                link.title === "dashboard")) ? null : (
               <li className={styles.navItem} key={link.id}>
                 <Link href={link.href}>
                   <a
