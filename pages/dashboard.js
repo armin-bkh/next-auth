@@ -1,11 +1,11 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getSession, signIn, useSession } from "next-auth/react";
 const DashboardPage = () => {
   // const [loading, setLoading] = useState(true);
   // const [userData, setUserData] = useState(null);
   const { data: session, status } = useSession();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (status === "unauthenticated") signIn();
   }, [status]);
 
