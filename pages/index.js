@@ -1,8 +1,16 @@
+import { useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const {data: session, status} = useSession();
+
+  // useEffect(()=>{
+  //   console.log({session, status});
+  // }, [status])
+
   return (
     <div className={styles.container}>
       <Head>
