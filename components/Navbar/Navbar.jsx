@@ -7,7 +7,7 @@ const links = [
   { id: 2, title: "Blogs", href: "/blogs" },
   { id: 3, title: "Dashboard", href: "/dashboard" },
   { id: 4, title: "login", href: "#" },
-  { id: 5, title: "signup", href: "#" },
+  { id: 5, title: "sign out", href: "#" },
 ];
 
 const Navbar = () => {
